@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJS Playground</title>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<h1>Hello ,welcome to my AngularJS Playground</h1>
+	<div ng-controller="MainController as main">
+		<div>
+			<strong>{{ main.items.length }}</strong> books in Store.
+			<ul>
+				<li ng-repeat="item in items" ng-click="main.removeFromStock(item, $index)">
+					{{ item.name }}
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
